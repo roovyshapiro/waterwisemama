@@ -6,6 +6,7 @@
     <title>Water Wise Mama - Swim Lessons</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
     <style>
         /* --- Color Palette & Variables --- */
@@ -212,21 +213,66 @@
             opacity: 0.8;
             color: var(--color-primary); /* Highlight on hover */
         }
+        /* --- Button Group Layout --- */
+        .cta-button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between the two buttons */
+            margin: 20px 0;
+            flex-wrap: wrap; /* Allows buttons to stack on small screens */
+        }
         
+        /* Make individual buttons in the group slightly smaller */
+        .cta-button-group .cta-button {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            margin: 0; /* Remove vertical margin from individual buttons */
+        }
+
+        /* Styling for the Email Button (Secondary Color) */
+        .email-button {
+            background-color: var(--color-secondary);
+        }
+        
+        .email-button:hover {
+            background-color: #A08035; /* Darker secondary color on hover */
+        }
+        
+        /* Styling for the WhatsApp Button (Primary Water Color) */
+        .whatsapp-button {
+            background-color: var(--color-water);
+        }
+        
+        /* Mobile: Ensure buttons take up full width for easy tapping */
+        @media (max-width: 500px) {
+            .cta-button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .cta-button-group .cta-button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
-            <p style="font-family: var(--font-logo); font-size: 2em; margin-top: 10px;">Water Wise Mama</p>
-            <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
-            <a href="mailto:shevy@waterwisemama.com" class="cta-button">
-                Book Your First Lesson
+<header>
+    <div class="container">
+        <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
+        <p style="font-family: var(--font-logo); font-size: 2em; margin-top: 10px;">Water Wise Mama</p>
+        <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
+        
+        <div class="cta-button-group">
+            <a href="mailto:shevy@waterwisemama.com" class="cta-button email-button">
+                <i class="fa fa-envelope"></i> Email Me
+            </a>
+            <a href="https://wa.me/19544883146" class="cta-button whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
             </a>
         </div>
-    </header>
+        </div>
+</header>
 
     <main>
         <section id="about" class="container">
