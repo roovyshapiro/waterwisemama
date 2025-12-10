@@ -253,10 +253,86 @@
                 width: 100%;
             }
         }
+      
+		/* --- STICKY CTA BUTTONS GROUP CSS --- */
+        .sticky-cta-group {
+            position: fixed; 
+            right: 15px;
+            bottom: 20px; /* Position group near the bottom */
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Stack the buttons vertically */
+            gap: 10px; /* Space between the buttons */
+        }
+        
+        .sticky-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .sticky-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Specific Button Colors */
+        
+        /* WhatsApp Green */
+        .whatsapp-sticky {
+            background-color: #25D366; 
+        }
+        
+        /* Email - Using the site's primary accent color */
+        .email-sticky {
+            background-color: var(--color-secondary); /* Gold/Tan color */
+        }
+        
+        /* Instagram Pink */
+        .instagram-sticky {
+            background-color: #E1306C;
+        }
+        /* --- Mobile Optimization for Sticky Buttons --- */
+        @media (max-width: 600px) {
+            
+            /* Reduce the size of the buttons slightly on smaller screens */
+            .sticky-button {
+                width: 45px;
+                height: 45px;
+                font-size: 1.6em; /* Adjust icon size to fit smaller button */
+            }
+
+            /* Move the entire group up slightly */
+            .sticky-cta-group {
+                bottom: 15px; 
+                right: 10px;
+                gap: 8px; /* Reduce spacing between buttons */
+            }
+        }
     </style>
 </head>
 <body>
+  <div class="sticky-cta-group">
 
+          <a href="https://wa.me/19544883146" target="_blank" class="sticky-button whatsapp-sticky" aria-label="WhatsApp Water Wise Mama">
+              <i class="fab fa-whatsapp"></i>
+          </a>
+
+          <a href="mailto:shevy@waterwisemama.com" class="sticky-button email-sticky" aria-label="Email Water Wise Mama">
+              <i class="fas fa-envelope"></i>
+          </a>
+
+          <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="sticky-button instagram-sticky" aria-label="Follow Water Wise Mama on Instagram">
+              <i class="fab fa-instagram"></i>
+          </a>
+      </div>
 <header>
     <div class="container">
         <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
