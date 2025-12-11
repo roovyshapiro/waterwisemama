@@ -281,7 +281,12 @@
     .instagram-sticky {
         background-color: #E1306C;
     }
-
+    /* --- New Logo Text Class (Desktop Default) --- */
+    .header-logo-text {
+        font-family: var(--font-logo);
+        font-size: 4em; /* Desktop size */
+        margin-top: 10px;
+    }
     /* --- MOBILE MEDIA QUERY --- */
     @media (max-width: 768px) {
         /* Mobile adjustment for about section */
@@ -297,6 +302,10 @@
         .header-line-image {
             width: 80%; /* Adjusted to 80% for better visual balance */
             padding-top: 20px; /* Adjusted padding */
+        }
+        /* FIX: Reduce the size of the logo text on mobile */
+        .header-logo-text {
+            font-size: 3em; /* Mobile size */
         }
     }
 
@@ -317,7 +326,7 @@
    <header>
       <div class="container">
          <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
-         <p style="font-family: var(--font-logo); font-size: 4em; margin-top: 10px;">Water Wise Mama</p>
+        <p class="header-logo-text">Water Wise Mama</p>
          <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
         <h3><i>Serving South Florida</i></h3>
         <img src="images/line.png" class="header-line-image"> 
