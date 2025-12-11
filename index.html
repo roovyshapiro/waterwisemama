@@ -299,143 +299,117 @@
         .instagram-sticky {
             background-color: #E1306C;
         }
-        /* --- Mobile Optimization for Sticky Buttons --- */
-        @media (max-width: 600px) {
-            
-            /* Reduce the size of the buttons slightly on smaller screens */
-            .sticky-button {
-                width: 45px;
-                height: 45px;
-                font-size: 1.6em; /* Adjust icon size to fit smaller button */
-            }
-
-            /* Move the entire group up slightly */
-            .sticky-cta-group {
-                bottom: 15px; 
-                right: 10px;
-                gap: 8px; /* Reduce spacing between buttons */
-            }
-        }
     </style>
 </head>
 <body>
-  <div class="sticky-cta-group">
-
-          <a href="https://wa.me/19544883146" target="_blank" class="sticky-button whatsapp-sticky" aria-label="WhatsApp Water Wise Mama">
-              <i class="fab fa-whatsapp"></i>
-          </a>
-
-          <a href="mailto:shevy@waterwisemama.com" class="sticky-button email-sticky" aria-label="Email Water Wise Mama">
-              <i class="fas fa-envelope"></i>
-          </a>
-
-          <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="sticky-button instagram-sticky" aria-label="Follow Water Wise Mama on Instagram">
-              <i class="fab fa-instagram"></i>
-          </a>
+   <div class="sticky-cta-group">
+      <a href="https://wa.me/19544883146" target="_blank" class="sticky-button whatsapp-sticky" aria-label="WhatsApp Water Wise Mama">
+      <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:shevy@waterwisemama.com" class="sticky-button email-sticky" aria-label="Email Water Wise Mama">
+      <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" class="sticky-button instagram-sticky" aria-label="Follow Water Wise Mama on Instagram">
+      <i class="fab fa-instagram"></i>
+      </a>
+   </div>
+   <header>
+      <div class="container">
+         <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
+         <p style="font-family: var(--font-logo); font-size: 2em; margin-top: 10px;">Water Wise Mama</p>
+         <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
+        <h3><i>Serving South Florida</i></h3>
       </div>
-<header>
-    <div class="container">
-        <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
-        <p style="font-family: var(--font-logo); font-size: 2em; margin-top: 10px;">Water Wise Mama</p>
-        <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
-        
-        <div class="cta-button-group">
-            <a href="mailto:shevy@waterwisemama.com" class="cta-button email-button">
-                <i class="fa fa-envelope"></i> Email Me
-            </a>
-            <a href="https://wa.me/19544883146" class="cta-button whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp Me
-            </a>
-        </div>
-        </div>
-</header>
-
-    <main>
-        <section id="about" class="container">
-            <div class="blurb-text">
+   </header>
+   <main>
+      <section id="about" class="container">
+         <div class="blurb-text">
             <h2>Meet Shevy, Your Water Wise Mama</h2>
-            <p>Hi, I am Shevy, a Jewish woman, Red Cross Water Safety Instructor, and mama who grew up with the pool as a second home. I've spent my life sharing the calm, joy, and healing that water can bring.</p>
+            <p>Hi! I'm Shevy, a Jewish woman, Red Cross Water Safety Instructor, and mama who grew up with the pool as a second home. I've spent my life sharing the calm, joy, and healing that water can bring.</p>
             <p>I teach all ages, from babies taking their first splashes to kids building independence and adults learning for fitness, confidence, or pure pleasure. My approach is always comfort first. I meet each swimmer where they are, build trust, and make the water feel safe, warm, and fun again.</p>
             <p>I specialize in helping children who carry fear from past experiences, as well as adults who have avoided the water for years. Real safety comes from feeling confident and in control, and that is the kind of safety we build together.</p>
             <p>I also support Jewish women and mothers who feel anxious about the mikvah. Gently working through water fears can turn a source of dread into an experience of calm, presence, and even joy, which then becomes a powerful gift to pass on to your children.</p>
             <p>If you or your child are ready to break the cycle of fear and create a new story in the water, I would be honored to guide you there.</p>
+         </div>
+         <div class="shevy-image-container">
+            <img src="images/shevy.png" alt="Shevy, Water Wise Mama" class="shevy-image">
+         </div>
+      </section>
+      <div class="cta-button-group">
+         <a href="mailto:shevy@waterwisemama.com" class="cta-button email-button">
+         <i class="fa fa-envelope"></i> Email Me
+         </a>
+         <a href="https://wa.me/19544883146" class="cta-button whatsapp-button" target="_blank">
+         <i class="fab fa-whatsapp"></i> WhatsApp Me
+         </a>
+      </div>
+      <section id="pricing" class="container">
+         <h2>Lesson Packages</h2>
+         <p>Will Travel to Your Pool! <br>*travel fees apply</p>
+         <div class="pricing-grid">
+            <div class="price-card">
+               <h3 class="card-title">Private Lesson</h3>
+               <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$65</p>
+               <ul class="price-details">
+                  <li>30-minute private session</li>
+                  <li>Serving Broward County</li>
+               </ul>
             </div>
-            <div class="shevy-image-container">
-                <img src="images/shevy.png" alt="Shevy, Water Wise Mama" class="shevy-image">
+            <div class="price-card">
+               <h3 class="card-title">Semi Private</h3>
+               <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$45</p>
+               <ul class="price-details">
+                  <li>30-minute session</li>
+                  <li>2 Swimmers</li>
+                  <li>Price per child</li>
+                  <li>Serving Broward County</li>
+               </ul>
             </div>
-        </section>
-
-        <section id="pricing" class="container">
-            <h2>Lesson Packages</h2>
-            <p>Will Travel to Your Pool! *travel fees apply</p>
-            
-            <div class="pricing-grid">
-                
-                <div class="price-card">
-                    <h3 class="card-title">Private Lesson</h3>
-                    <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$65</p>
-                    <ul class="price-details">
-                        <li>30-minute private session</li>
-                        <li>Serving Broward County</li>
-                    </ul>
-                </div>
-
-                <div class="price-card">
-                    <h3 class="card-title">Semi Private</h3>
-                    <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$45</p>
-                    <ul class="price-details">
-                        <li>30-minute session</li>
-                        <li>2 Swimmers</li>
-                        <li>Serving Broward County</li>
-                    </ul>
-                </div>
-
-                <div class="price-card">
-                    <h3 class="card-title">Group Lesson</h3>
-                    <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$35</p>
-                    <ul class="price-details">
-                        <li>30-minute session</li>
-                        <li>3+ Swimmers</li>
-                        <li>Serving Broward County</li>
-                    </ul>
-                </div>
-                <div class="price-card">
-                    <h3 class="card-title">Mikvah Mama</h3>
-                    <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$100</p>
-                    <ul class="price-details">
-                        <li>45 minute private session</li>
-                        <li>Building Water/Mikvah Confidence</li>
-                        <li>Serving Broward County</li>
-                    </ul>
-                </div>
-
+            <div class="price-card">
+               <h3 class="card-title">Group Lesson</h3>
+               <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$35</p>
+               <ul class="price-details">
+                  <li>30-minute session</li>
+                  <li>3+ Swimmers</li>
+                  <li>Price per child</li>
+                  <li>Serving Broward County</li>
+               </ul>
             </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p style="font-family: var(--font-logo); font-size: 1.5em; margin: 0;">Water Wise Mama</p>
-            <p style="margin-top: 5px;">Ready to begin your journey to water wisdom?</p>
-            
-            <a href="mailto:shevy@waterwisemama.com" class="cta-button" style="background-color: white; color: var(--color-primary);">
-                Email Shevy Now
+            <div class="price-card">
+               <h3 class="card-title">Mikvah Mama</h3>
+               <p style="font-size: 2em; font-weight: bold; color: var(--color-primary);">$100</p>
+               <ul class="price-details">
+                  <li>45 minute private session</li>
+                  <li>Building Water/Mikvah Confidence</li>
+                  <li>Serving Broward County</li>
+               </ul>
+            </div>
+         </div>
+         <a href="mailto:shevy@waterwisemama.com" class="cta-button">
+         Secure Your Spot Today
+         </a>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <p style="font-family: var(--font-logo); font-size: 1.5em; margin: 0;">Water Wise Mama</p>
+         <p style="margin-top: 5px;">Ready to begin your journey to water wisdom?</p>
+         <a href="mailto:shevy@waterwisemama.com" class="cta-button" style="background-color: white; color: var(--color-primary);">
+         Email Shevy Now
+         </a>
+         <div class="social-links">
+            <a href="https://wa.me/19544883146" target="_blank" aria-label="WhatsApp Business">
+            <i class="fab fa-whatsapp"></i>
             </a>
-
-            <div class="social-links">
-                <a href="https://wa.me/19544883146" target="_blank" aria-label="WhatsApp Business">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            
-            <p style="font-size: 0.9em; margin-top: 15px;">&copy; <script>document.write(new Date().getFullYear())</script> Water Wise Mama. All rights reserved.</p>
-        </div>
-    </footer>
-
+            <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+         </div>
+         <p style="font-size: 0.9em; margin-top: 15px;">
+            &copy; <script>document.write(new Date().getFullYear())</script> Water Wise Mama. All rights reserved.
+         </p>
+      </div>
+   </footer>
 </body>
+
 </html>
