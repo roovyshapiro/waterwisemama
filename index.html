@@ -8,298 +8,299 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
-    <style>
-        /* --- Color Palette & Variables --- */
-        :root {
-            --color-primary: #8B4513; /* A warm, earthy brown for text/accents */
-            --color-secondary: #B8860B; /* A golden/tan color for highlights */
-            --color-background: #FAF8F5; /* A light, creamy beige matching the logo background */
-            --color-water: #9CB2B0; /* A soft, muted teal/sage for water elements */
-            --font-logo: 'Great Vibes', cursive;
-            --font-main: 'Cormorant Garamond', serif;
-        }
+<style>
+    /* --- Color Palette & Variables --- */
+    :root {
+        --color-primary: #8B4513; /* A warm, earthy brown for text/accents */
+        --color-secondary: #B8860B; /* A golden/tan color for highlights */
+        --color-background: #FAF8F5; /* A light, creamy beige matching the logo background */
+        --color-water: #9CB2B0; /* A soft, muted teal/sage for water elements */
+        --font-logo: 'Great Vibes', cursive;
+        --font-main: 'Cormorant Garamond', serif;
+    }
 
-        /* --- Global Styles & Reset --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    /* --- Global Styles & Reset --- */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            font-family: var(--font-main);
-            color: var(--color-primary);
-            background-color: var(--color-background);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+    body {
+        font-family: var(--font-main);
+        color: var(--color-primary);
+        background-color: var(--color-background);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
 
-        h1, h2, h3 {
-            font-weight: 600;
-            margin-bottom: 0.5em;
-        }
+    h1, h2, h3 {
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
 
-        h2 {
-            font-size: 2.2em;
-            text-align: center;
-            /*padding-top: 40px;*/
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    h2 {
+        font-size: 2.2em;
+        text-align: center;
+        /*padding-top: 40px;*/
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 
-        p {
-            margin-bottom: 1em;
-            font-size: 1.1em;
-        }
+    p {
+        margin-bottom: 1em;
+        font-size: 1.1em;
+    }
 
-        /* --- Header & Logo Section --- */
-        header {
-            text-align: center;
-            padding: 40px 0 20px;
-        }
+    /* --- Header & Logo Section --- */
+    header {
+        text-align: center;
+        padding: 40px 0 20px;
+    }
 
-        .logo-img {
-            max-width: 250px;
-            height: auto;
-            border-radius: 50%;
-            border: 5px solid var(--color-water); /* Subtle border matching the water color */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .logo-img:hover {
-            transform: scale(1.02);
-        }
+    .logo-img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid var(--color-water); /* Subtle border matching the water color */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+    }
+    
+    .logo-img:hover {
+        transform: scale(1.02);
+    }
 
-        /* --- Main CTA Button --- */
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-water);
-            color: white;
-            padding: 15px 30px;
-            margin: 20px 0;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s, transform 0.1s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* --- Line Image Style (Default/Desktop) --- */
+    .header-line-image {
+        width: 50%; /* Default size for desktop */
+        height: auto;
+        padding-top: 40px;
+    }
 
-        .cta-button:hover {
-            background-color: #839F9D; /* Slightly darker shade of water color */
-            transform: translateY(-2px);
-        }
+    /* --- Main CTA Button --- */
+    .cta-button {
+        display: inline-block;
+        background-color: var(--color-water);
+        color: white;
+        padding: 15px 30px;
+        margin: 20px 0;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s, transform 0.1s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        /* --- Shevy's Blurb Section --- */
-        #about {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-            padding: 40px 0;
-        }
+    .cta-button:hover {
+        background-color: #839F9D; /* Slightly darker shade of water color */
+        transform: translateY(-2px);
+    }
+    
+    /* --- Button Group Layout (Header/Main Content) --- */
+    .cta-button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between the two buttons */
+        margin: 20px auto; /* Use auto for centering */
+        flex-wrap: wrap; /* Allows buttons to wrap/stack if absolutely necessary */
+        width: 90%; 
+        max-width: 500px;
+    }
+    
+    /* Make individual buttons in the group slightly smaller */
+    .cta-button-group .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        margin: 0; /* Remove vertical margin from individual buttons */
+    }
 
-        .shevy-image-container {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
-        }
+    /* Styling for the Email Button (Secondary Color) */
+    .email-button {
+        background-color: var(--color-secondary);
+    }
+    
+    .email-button:hover {
+        background-color: #A08035; /* Darker secondary color on hover */
+    }
+    
+    /* Styling for the WhatsApp Button (Primary Water Color) */
+    .whatsapp-button {
+        background-color: var(--color-water);
+    }
 
-        .shevy-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
+    /* --- Shevy's Blurb Section --- */
+    #about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 0;
+    }
 
-        .blurb-text {
-            flex: 2;
-            min-width: 300px;
-        }
-        
+    .shevy-image-container {
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+    }
+
+    .shevy-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .blurb-text {
+        flex: 2;
+        min-width: 300px;
+    }
+    
+    /* --- Pricing Section --- */
+    #pricing {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .pricing-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .price-card {
+        background-color: white;
+        border: 2px solid var(--color-water);
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+    }
+    
+    .price-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-title {
+        font-size: 1.5em;
+        color: var(--color-secondary);
+        margin-bottom: 10px;
+    }
+
+    .price-details li {
+        list-style: none;
+        padding: 5px 0;
+        border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
+    }
+    
+    .price-details li:last-child {
+        border-bottom: none;
+    }
+
+    /* --- Footer & Socials --- */
+    footer {
+        margin-top: auto; /* Pushes footer to the bottom */
+        background-color: var(--color-water);
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .social-links {
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-links a {
+        color: white;
+        font-size: 1.8em;
+        transition: opacity 0.3s;
+    }
+
+    .social-links a:hover {
+        opacity: 0.8;
+        color: var(--color-primary); /* Highlight on hover */
+    }
+
+    /* --- STICKY CTA BUTTONS GROUP CSS --- */
+    .sticky-cta-group {
+        position: fixed; 
+        right: 15px;
+        bottom: 20px; /* Position group near the bottom */
+        z-index: 1000;
+        display: flex;
+        flex-direction: column; /* Stack the buttons vertically */
+        gap: 10px; /* Space between the buttons */
+    }
+    
+    .sticky-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8em;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .sticky-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Specific Button Colors */
+    .whatsapp-sticky {
+        background-color: #25D366; 
+    }
+    .email-sticky {
+        background-color: var(--color-secondary); /* Gold/Tan color */
+    }
+    .instagram-sticky {
+        background-color: #E1306C;
+    }
+
+    /* --- MOBILE MEDIA QUERY --- */
+    @media (max-width: 768px) {
         /* Mobile adjustment for about section */
-        @media (max-width: 768px) {
-            #about {
-                flex-direction: column;
-                text-align: center;
-            }
-            .shevy-image-container {
-                order: -1; /* Move image to the top on mobile */
-            }
-        }
-
-        /* --- Pricing Section --- */
-        #pricing {
-            padding: 40px 0;
+        #about {
+            flex-direction: column;
             text-align: center;
         }
+        .shevy-image-container {
+            order: -1; /* Move image to the top on mobile */
+        }
+        
+        /* FIX: Make the header line image wider on mobile */
+        .header-line-image {
+            width: 80%; /* Adjusted to 80% for better visual balance */
+            padding-top: 20px; /* Adjusted padding */
+        }
+    }
 
-        .pricing-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .price-card {
-            background-color: white;
-            border: 2px solid var(--color-water);
-            border-radius: 10px;
-            padding: 20px;
-            width: 100%;
-            max-width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .price-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-title {
-            font-size: 1.5em;
-            color: var(--color-secondary);
-            margin-bottom: 10px;
-        }
-
-        .price-details li {
-            list-style: none;
-            padding: 5px 0;
-            border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
-        }
-        
-        .price-details li:last-child {
-            border-bottom: none;
-        }
-
-        /* --- Footer & Socials --- */
-        footer {
-            margin-top: auto; /* Pushes footer to the bottom */
-            background-color: var(--color-water);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        .social-links {
-            margin: 15px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.8em;
-            transition: opacity 0.3s;
-        }
-
-        .social-links a:hover {
-            opacity: 0.8;
-            color: var(--color-primary); /* Highlight on hover */
-        }
-        /* --- Button Group Layout --- */
-        .cta-button-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between the two buttons */
-            margin: 20px 0;
-            flex-wrap: wrap; /* Allows buttons to stack on small screens */
-        }
-        
-        /* Make individual buttons in the group slightly smaller */
-        .cta-button-group .cta-button {
-            padding: 12px 25px;
-            font-size: 1.1em;
-            margin: 0; /* Remove vertical margin from individual buttons */
-        }
-
-        /* Styling for the Email Button (Secondary Color) */
-        .email-button {
-            background-color: var(--color-secondary);
-        }
-        
-        .email-button:hover {
-            background-color: #A08035; /* Darker secondary color on hover */
-        }
-        
-        /* Styling for the WhatsApp Button (Primary Water Color) */
-        .whatsapp-button {
-            background-color: var(--color-water);
-        }
-        
-        /* Mobile: Ensure buttons take up full width for easy tapping */
-        @media (max-width: 500px) {
-            .cta-button-group {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .cta-button-group .cta-button {
-                width: 100%;
-            }
-        }
-      
-		/* --- STICKY CTA BUTTONS GROUP CSS --- */
-        .sticky-cta-group {
-            position: fixed; 
-            right: 15px;
-            bottom: 20px; /* Position group near the bottom */
-            z-index: 1000;
-            display: flex;
-            flex-direction: column; /* Stack the buttons vertically */
-            gap: 10px; /* Space between the buttons */
-        }
-        
-        .sticky-button {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.8em;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .sticky-button:hover {
-            transform: scale(1.1);
-        }
-
-        /* Specific Button Colors */
-        
-        /* WhatsApp Green */
-        .whatsapp-sticky {
-            background-color: #25D366; 
-        }
-        
-        /* Email - Using the site's primary accent color */
-        .email-sticky {
-            background-color: var(--color-secondary); /* Gold/Tan color */
-        }
-        
-        /* Instagram Pink */
-        .instagram-sticky {
-            background-color: #E1306C;
-        }
-    </style>
+</style>
 </head>
 <body>
    <div class="sticky-cta-group">
@@ -319,7 +320,7 @@
          <p style="font-family: var(--font-logo); font-size: 4em; margin-top: 10px;">Water Wise Mama</p>
          <h1>Gentle, Effective & Water-Wise Swim Lessons</h1>
         <h3><i>Serving South Florida</i></h3>
-        <img src="images/line.png" style="width:50%;height:auto;padding-top:40px"> 
+        <img src="images/line.png" class="header-line-image"> 
       </div>
    </header>
    <main>
