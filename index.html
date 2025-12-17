@@ -156,43 +156,90 @@
     }
     .arrow:hover { color: var(--color-primary); transform: scale(1.1); }
 
-    /* --- MODAL STYLES --- */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.6);
-        backdrop-filter: blur(3px);
+ /* --- MODAL STYLES --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    padding: 40px 10px;
+}
+
+/* The Stage centers the box and allows arrows to sit outside it */
+.modal-stage {
+    position: relative;
+    max-width: 850px; /* Wider than the content to make room for arrows */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    padding: 50px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 650px; /* Actual width of the text box */
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    /* No max-height here, so it grows with text */
+}
+
+.modal-body {
+    font-size: 1.2em;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: var(--color-primary);
+}
+
+/* Arrows are now positioned relative to the STAGE */
+.modal-arrow {
+    background: none;
+    border: none;
+    color: white; /* White looks better against the dark backdrop */
+    font-size: 3em;
+    cursor: pointer;
+    padding: 20px;
+    transition: color 0.3s, transform 0.2s;
+    z-index: 2001;
+}
+
+.modal-arrow:hover {
+    color: var(--color-water);
+    transform: scale(1.2);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--color-water);
+}
+
+/* Mobile: Stack arrows under the box so they don't get cut off */
+@media (max-width: 768px) {
+    .modal-stage {
+        flex-direction: column;
     }
     .modal-content {
-        background-color: var(--color-background);
-        margin: 10% auto;
-        padding: 40px;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 600px;
-        position: relative;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        max-height: 70vh;
-        overflow-y: auto;
+        padding: 30px 20px;
+        margin-bottom: 20px;
     }
-    .close-modal {
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        font-size: 28px;
-        cursor: pointer;
-        color: var(--color-primary);
+    .modal-arrow {
+        font-size: 2em;
+        padding: 10px;
     }
-    #full-testimonial-content {
-        font-size: 1.2em;
-        line-height: 1.6;
-        white-space: pre-wrap; /* Preserves line breaks */
-    }
+}
 
     /* --- Pricing Section --- */
     #pricing { padding: 40px 0; text-align: center; }
@@ -271,25 +318,25 @@
                     <p class="testimonial-author">- Rivky S</p>
                 </div>
 
-                <div class="testimonial-slide" data-full="If you're looking for a patient, kind, not pushy, and skilled swim instructor, then Shevy is the one! After one session, my daughter felt comfortable with underwater activities. After two sessions, she already started swimming with assistance. And shortly after swam independently.&#10;&#10;My daughter really loves Shevy and although we finished swim lessons, she always asks about her and wants me to tell Morah Shevy that she is swimming. Shevy is honest and truly has a passion to help kids swim and achieve this very important skill. I'm so grateful to her!">
+                <div class="testimonial-slide" data-full="If you're looking for a patient, kind, not pushy, and skilled swim instructor, then Shevy is the one! After one session, my daughter felt comfortable with underwater activities. After two sessions, she already started swimming with assistance. And shortly after swam independently.&#10;&#10;My daughter really loves Shevy and although we finished swim lessons, she always asks about her and wants me to tell Morah Shevy that she is swimming.&#10;&#10;Shevy is honest and truly has a passion to help kids swim and achieve this very important skill. I'm so grateful to her!">
                     <p class="testimonial-text">"If you're looking for a patient, kind, and skilled instructor, Shevy is the one! My daughter already started swimming independently after just a few sessions."</p>
                     <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
                     <p class="testimonial-author">- Kim H</p>
                 </div>
 
-                <div class="testimonial-slide" data-full="Shevy is amazing. My kids were both traumatized from past swimming instructor experiences. They refused to put their heads under the water or even to get their face wet in the bath. Shevy’s method is methodical, patient and caring. She really made sure they were comfortable and their progress is incredible. They love swimming and going in the water. We love Shevy and highly recommend her!">
+                <div class="testimonial-slide" data-full="Shevy is amazing. My kids were both traumatized from past swimming instructor experiences. They refused to put their heads under the water or even to get their face wet in the bath.&#10;&#10;Shevy’s method is methodical, patient and caring. She really made sure they were comfortable and their progress is incredible. They love swimming and going in the water. We love Shevy and highly recommend her!">
                     <p class="testimonial-text">"My kids were traumatized from past instructors. Shevy’s method is methodical and caring—their progress has been incredible. They love the water now!"</p>
                     <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
                     <p class="testimonial-author">- Rosie G</p>
                 </div>
 
-                <div class="testimonial-slide" data-full="I met Shevy five years ago when my daughter was almost three years old. She has the most beautiful way of teaching kids the life saving and essential skill of swimming without pushing them before they are ready. When my son was ready to learn we struggled to find times that worked for both of us so I went through three other swim instructors. My son became terrified of the water with their harsher approaches to teaching, and as a result refused to go in the water for months.&#10;&#10;I contacted Shevy once more and we were able to set up lessons. Through her patient and loving approach she was able to get him back in the water and excited to learn the tools needed in order to swim. I am now starting lessons with my younger son and am confident Shevy will have him water safe and swimming in no time with her incredible gift.">
+                <div class="testimonial-slide" data-full="I met Shevy five years ago when my daughter was almost three years old. She has the most beautiful way of teaching kids the life saving and essential skill of swimming without pushing them before they are ready.&#10;&#10;When my son was ready to learn we struggled to find times that worked for both of us so I went through three other swim instructors. My son became terrified of the water with their harsher approaches to teaching, and as a result refused to go in the water for months.&#10;&#10;I contacted Shevy once more and we were able to set up lessons. Through her patient and loving approach she was able to get him back in the water and excited to learn the tools needed in order to swim.&#10;&#10;I am now starting lessons with my younger son and am confident Shevy will have him water safe and swimming in no time with her incredible gift.">
                     <p class="testimonial-text">"She has a beautiful way of teaching without pushing. She was able to get my son back in the water after other instructors made him terrified."</p>
                     <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
                     <p class="testimonial-author">- Chaya N</p>
                 </div>
 
-                <div class="testimonial-slide" data-full="I cannot recommend Shevy enough. For most of my life, being in large bodies of water was a deep fear of mine due to a near-drowning incident as a child. Shevy didn’t just teach me how to swim, she taught me how to feel calm, grounded, and safe in the water.&#10;&#10;She worked at a pace that honored my nervous system, helping me build trust with the water slowly and intentionally. Through her guidance, I learned not only how to swim with confidence, but how to feel safe within myself while being near water. This transformation extended beyond me. My children had absorbed my fear, and Shevy worked with them as well. Shevy has a rare gift: the ability to teach skill while creating emotional safety.">
+                <div class="testimonial-slide" data-full="I cannot recommend Shevy enough. For most of my life, being in large bodies of water was a deep fear of mine due to a near-drowning incident as a child. Shevy didn’t just teach me how to swim, she taught me how to feel calm, grounded, and safe in the water.&#10;&#10;She worked at a pace that honored my nervous system, helping me build trust with the water slowly and intentionally. Through her guidance, I learned not only how to swim with confidence, but how to feel safe within myself while being near water.&#10;&#10;This transformation extended beyond me. My children had absorbed my fear, and Shevy worked with them meeting each child exactly where they were. Every lesson was customized to each child’s needs, with no pressure, only patience and encouragement. As a result, my children are now confident swimmers.&#10;&#10;Shevy has a rare gift: the ability to teach skill while creating emotional safety. If you or your children need support becoming confident in the water, I wholeheartedly recommend her.">
                     <p class="testimonial-text">"Shevy didn’t just teach me how to swim, she taught me how to feel calm, grounded, and safe after a lifetime of fearing the water."</p>
                     <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
                     <p class="testimonial-author">- Leah G</p>
@@ -310,9 +357,18 @@
 </section>
 
 <div id="testimonialModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <div id="full-testimonial-content"></div>
+    <div class="modal-stage">
+        <button class="modal-arrow prev" onclick="changeModalSlide(-1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div id="full-testimonial-content"></div>
+                <p id="modal-author" style="margin-top: 25px; font-weight: 600; color: var(--color-secondary); text-align: right;"></p>
+            </div>
+        </div>
+
+        <button class="modal-arrow next" onclick="changeModalSlide(1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
     </div>
 </div>
 
@@ -421,20 +477,41 @@
         dots[slideIndex].classList.add("active");
     }
 
-    // Modal Logic
-    function openModal(btn) {
-        stopAutoPlay(); // Stop sliding while reading
-        const fullText = btn.parentElement.getAttribute('data-full');
-        document.getElementById('full-testimonial-content').innerText = fullText;
+// --- MODAL LOGIC ---
+
+    function openModal() {
+        stopAutoPlay();
+        updateModalContent();
         document.getElementById('testimonialModal').style.display = "block";
+    }
+
+    function updateModalContent() {
+        // Get data from the currently active background slide
+        const currentSlideEl = slides[slideIndex];
+        const fullText = currentSlideEl.getAttribute('data-full');
+        const author = currentSlideEl.querySelector('.testimonial-author').innerText;
+
+        document.getElementById('full-testimonial-content').innerText = fullText;
+        document.getElementById('modal-author').innerText = author;
+    }
+
+    function changeModalSlide(n) {
+        // Change the main slide index
+        slideIndex += n;
+        if (slideIndex >= slides.length) { slideIndex = 0 }
+        if (slideIndex < 0) { slideIndex = slides.length - 1 }
+        
+        // Sync the background slider so it matches when they close the modal
+        showSlides(slideIndex);
+        // Update the text inside the modal
+        updateModalContent();
     }
 
     function closeModal() {
         document.getElementById('testimonialModal').style.display = "none";
-        startAutoPlay(); // Resume sliding
+        startAutoPlay();
     }
 
-    // Close modal if clicking outside the box
     window.onclick = function(event) {
         const modal = document.getElementById('testimonialModal');
         if (event.target == modal) {
