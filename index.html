@@ -6,25 +6,20 @@
     <title>Water Wise Mama - Swim Lessons</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
 <style>
     /* --- Color Palette & Variables --- */
     :root {
-        --color-primary: #8B4513; /* A warm, earthy brown for text/accents */
-        --color-secondary: #B8860B; /* A golden/tan color for highlights */
-        --color-background: #FAF8F5; /* A light, creamy beige matching the logo background */
-        --color-water: #9CB2B0; /* A soft, muted teal/sage for water elements */
+        --color-primary: #8B4513; 
+        --color-secondary: #B8860B; 
+        --color-background: #FAF8F5; 
+        --color-water: #9CB2B0; 
         --font-logo: 'Great Vibes', cursive;
         --font-main: 'Cormorant Garamond', serif;
     }
 
     /* --- Global Styles & Reset --- */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
         font-family: var(--font-main);
@@ -43,49 +38,23 @@
         padding: 20px 0;
     }
 
-    h1, h2, h3 {
-        font-weight: 600;
-        margin-bottom: 0.5em;
-    }
-
-    h2 {
-        font-size: 2.2em;
-        text-align: center;
-        /*padding-top: 40px;*/
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    p {
-        margin-bottom: 1em;
-        font-size: 1.1em;
-    }
+    h1, h2, h3 { font-weight: 600; margin-bottom: 0.5em; }
+    h2 { font-size: 2.2em; text-align: center; text-transform: uppercase; letter-spacing: 2px; }
+    p { margin-bottom: 1em; font-size: 1.1em; }
 
     /* --- Header & Logo Section --- */
-    header {
-        text-align: center;
-        padding: 40px 0 20px;
-    }
-
+    header { text-align: center; padding: 40px 0 20px; }
     .logo-img {
         max-width: 250px;
         height: auto;
         border-radius: 50%;
-        border: 5px solid var(--color-water); /* Subtle border matching the water color */
+        border: 5px solid var(--color-water);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease;
     }
-    
-    .logo-img:hover {
-        transform: scale(1.02);
-    }
-
-    /* --- Line Image Style (Default/Desktop) --- */
-    .header-line-image {
-        width: 50%; /* Default size for desktop */
-        height: auto;
-        padding-top: 40px;
-    }
+    .logo-img:hover { transform: scale(1.02); }
+    .header-line-image { width: 50%; height: auto; padding-top: 40px; }
+    .header-logo-text { font-family: var(--font-logo); font-size: 4em; margin-top: 10px; }
 
     /* --- Main CTA Button --- */
     .cta-button {
@@ -103,212 +72,153 @@
         transition: background-color 0.3s, transform 0.1s;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
-    .cta-button:hover {
-        background-color: #839F9D; /* Slightly darker shade of water color */
-        transform: translateY(-2px);
-    }
+    .cta-button:hover { background-color: #839F9D; transform: translateY(-2px); }
     
-    /* --- Button Group Layout (Header/Main Content) --- */
     .cta-button-group {
         display: flex;
         justify-content: center;
-        gap: 20px; /* Space between the two buttons */
-        margin: 20px auto; /* Use auto for centering */
-        flex-wrap: wrap; /* Allows buttons to wrap/stack if absolutely necessary */
+        gap: 20px;
+        margin: 20px auto;
+        flex-wrap: wrap;
         width: 90%; 
         max-width: 500px;
     }
-    
-    /* Make individual buttons in the group slightly smaller */
-    .cta-button-group .cta-button {
-        padding: 12px 25px;
-        font-size: 1.1em;
-        margin: 0; /* Remove vertical margin from individual buttons */
-    }
+    .cta-button-group .cta-button { padding: 12px 25px; font-size: 1.1em; margin: 0; }
+    .email-button { background-color: var(--color-secondary); }
+    .whatsapp-button { background-color: var(--color-water); }
 
-    /* Styling for the Email Button (Secondary Color) */
-    .email-button {
-        background-color: var(--color-secondary);
-    }
-    
-    .email-button:hover {
-        background-color: #A08035; /* Darker secondary color on hover */
-    }
-    
-    /* Styling for the WhatsApp Button (Primary Water Color) */
-    .whatsapp-button {
-        background-color: var(--color-water);
-    }
+    /* --- Sections --- */
+    #about { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; padding: 40px 0; }
+    .shevy-image-container { flex: 1; min-width: 250px; text-align: center; }
+    .shevy-image { width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); }
+    .blurb-text { flex: 2; min-width: 300px; }
 
-    /* --- Shevy's Blurb Section --- */
-    #about {
+    /* --- TESTIMONIALS SLIDER CSS --- */
+    #testimonials {
+        background-color: rgba(156, 178, 176, 0.1);
+        padding: 10px 0;
+        margin: 10px 0;
+        text-align: center;
+        position: relative;
+    }
+    .testimonial-wrapper {
+        position: relative;
+        max-width: 850px;
+        margin: 0 auto;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
-        gap: 30px;
-        padding: 40px 0;
     }
-
-    .shevy-image-container {
+    .testimonial-container {
         flex: 1;
-        min-width: 250px;
-        text-align: center;
+        min-height: 250px;
     }
-
-    .shevy-image {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 10px;
-        object-fit: cover;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    .testimonial-slide {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
     }
-
-    .blurb-text {
-        flex: 2;
-        min-width: 300px;
-    }
+    .testimonial-slide.active { display: block; }
     
-    /* --- Pricing Section --- */
-    #pricing {
-        padding: 40px 0;
-        text-align: center;
+    .testimonial-text {
+        font-style: italic;
+        font-size: 1.4em;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        color: var(--color-primary);
+        padding: 0 40px;
     }
-
-    .pricing-grid {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 30px;
-        flex-wrap: wrap;
-    }
-
-    .price-card {
-        background-color: white;
-        border: 2px solid var(--color-water);
-        border-radius: 10px;
-        padding: 20px;
-        width: 100%;
-        max-width: 300px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s;
-    }
-    
-    .price-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .card-title {
-        font-size: 1.5em;
+    .read-more-btn {
+        background: none;
+        border: 1px solid var(--color-secondary);
         color: var(--color-secondary);
-        margin-bottom: 10px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: var(--font-main);
+        font-size: 0.9em;
+        transition: 0.3s;
+        margin-bottom: 15px;
     }
-
-    .price-details li {
-        list-style: none;
-        padding: 5px 0;
-        border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
+    .read-more-btn:hover {
+        background: var(--color-secondary);
+        color: white;
     }
     
-    .price-details li:last-child {
-        border-bottom: none;
+    /* Arrows */
+    .arrow {
+        background: none;
+        border: none;
+        color: var(--color-water);
+        font-size: 2.5em;
+        cursor: pointer;
+        transition: transform 0.2s, color 0.3s;
+        padding: 10px;
+        z-index: 10;
+    }
+    .arrow:hover { color: var(--color-primary); transform: scale(1.1); }
+
+    /* --- MODAL STYLES --- */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        backdrop-filter: blur(3px);
+    }
+    .modal-content {
+        background-color: var(--color-background);
+        margin: 10% auto;
+        padding: 40px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    .close-modal {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--color-primary);
+    }
+    #full-testimonial-content {
+        font-size: 1.2em;
+        line-height: 1.6;
+        white-space: pre-wrap; /* Preserves line breaks */
     }
 
-    /* --- Footer & Socials --- */
-    footer {
-        margin-top: auto; /* Pushes footer to the bottom */
-        background-color: var(--color-water);
-        color: white;
-        text-align: center;
-        padding: 30px 0;
-    }
-    
-    .social-links {
-        margin: 15px 0;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
+    /* --- Pricing Section --- */
+    #pricing { padding: 40px 0; text-align: center; }
+    .pricing-grid { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+    .price-card { background-color: white; border: 2px solid var(--color-water); border-radius: 10px; padding: 20px; width: 100%; max-width: 300px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: transform 0.3s; }
+    .price-card:hover { transform: translateY(-5px); }
+    .card-title { font-size: 1.5em; color: var(--color-secondary); margin-bottom: 10px; }
+    .price-details li { list-style: none; padding: 5px 0; border-bottom: 1px dashed rgba(139, 69, 19, 0.2); }
 
-    .social-links a {
-        color: white;
-        font-size: 1.8em;
-        transition: opacity 0.3s;
-    }
+    /* --- Footer & Sticky --- */
+    footer { margin-top: auto; background-color: var(--color-water); color: white; text-align: center; padding: 30px 0; }
+    .social-links { margin: 15px 0; display: flex; justify-content: center; gap: 20px; }
+    .social-links a { color: white; font-size: 1.8em; }
+    .sticky-cta-group { position: fixed; right: 15px; bottom: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; }
+    .sticky-button { width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.8em; color: white; text-decoration: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); }
+    .whatsapp-sticky { background-color: #25D366; }
+    .email-sticky { background-color: var(--color-secondary); }
+    .instagram-sticky { background-color: #E1306C; }
 
-    .social-links a:hover {
-        opacity: 0.8;
-        color: var(--color-primary); /* Highlight on hover */
-    }
-
-    /* --- STICKY CTA BUTTONS GROUP CSS --- */
-    .sticky-cta-group {
-        position: fixed; 
-        right: 15px;
-        bottom: 20px; /* Position group near the bottom */
-        z-index: 1000;
-        display: flex;
-        flex-direction: column; /* Stack the buttons vertically */
-        gap: 10px; /* Space between the buttons */
-    }
-    
-    .sticky-button {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.8em;
-        color: white;
-        text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .sticky-button:hover {
-        transform: scale(1.1);
-    }
-
-    /* Specific Button Colors */
-    .whatsapp-sticky {
-        background-color: #25D366; 
-    }
-    .email-sticky {
-        background-color: var(--color-secondary); /* Gold/Tan color */
-    }
-    .instagram-sticky {
-        background-color: #E1306C;
-    }
-    /* --- New Logo Text Class (Desktop Default) --- */
-    .header-logo-text {
-        font-family: var(--font-logo);
-        font-size: 4em; /* Desktop size */
-        margin-top: 10px;
-    }
-    /* --- MOBILE MEDIA QUERY --- */
     @media (max-width: 768px) {
-        /* Mobile adjustment for about section */
-        #about {
-            flex-direction: column;
-            text-align: center;
-        }
-        .shevy-image-container {
-            order: -1; /* Move image to the top on mobile */
-        }
-        
-        /* FIX: Make the header line image wider on mobile */
-        .header-line-image {
-            width: 80%; /* Adjusted to 80% for better visual balance */
-            padding-top: 20px; /* Adjusted padding */
-        }
-        /* FIX: Reduce the size of the logo text on mobile */
-        .header-logo-text {
-            font-size: 2em; /* Mobile size */
-        }
+        #about { flex-direction: column; text-align: center; }
+        .shevy-image-container { order: -1; }
+        .header-line-image { width: 80%; padding-top: 20px; }
+        .header-logo-text { font-size: 2.2em; }
+        .testimonial-text { font-size: 1.1em; }
     }
-
 </style>
 </head>
 <body>
@@ -323,29 +233,89 @@
       <i class="fab fa-instagram"></i>
       </a>
    </div>
+
    <header>
       <div class="container">
          <img src="images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
-        <p class="header-logo-text">Water Wise Mama</p>
+         <p class="header-logo-text">Water Wise Mama</p>
          <h1>Gentle & Effective Swim Lessons</h1>
-        <h3><i>Serving South Florida</i></h3>
-        <img src="images/line.png" class="header-line-image"> 
+         <h3><i>Serving South Florida</i></h3>
+         <img src="images/line.png" class="header-line-image"> 
       </div>
    </header>
+
    <main>
       <section id="about" class="container">
          <div class="blurb-text">
             <h2>Meet Shevy,<br>Your Water Wise Mama</h2>
             <p>Hi! I'm Shevy, a Jewish woman, Red Cross Water Safety Instructor, and mama who grew up with the pool as a second home. I've spent my life sharing the calm, joy, and healing that water can bring.</p>
-            <p>I teach all ages, from babies taking their first splashes to kids building independence and adults learning for fitness, confidence, or pure pleasure. My approach is always comfort first. I meet each swimmer where they are, build trust, and make the water feel safe, warm, and fun again.</p>
-            <p>I specialize in helping children who carry fear from past experiences, as well as adults who have avoided the water for years. Real safety comes from feeling confident and in control, and that is the kind of safety we build together.</p>
-            <p>I also support Jewish women and mothers who feel anxious about the mikvah. Gently working through water fears can turn a source of dread into an experience of calm, presence, and even joy, which then becomes a powerful gift to pass on to your children.</p>
-            <p>If you or your child are ready to break the cycle of fear and create a new story in the water, I would be honored to guide you there.</p>
+            <p>I teach all ages, from babies taking their first splashes to kids building independence and adults learning for fitness, confidence, or pure pleasure. My approach is always comfort first.</p>
+            <p>I specialize in helping children who carry fear from past experiences, as well as adults who have avoided the water for years. Real safety comes from feeling confident and in control.</p>
+            <p>I also support Jewish women and mothers who feel anxious about the mikvah. Gently working through water fears can turn a source of dread into an experience of calm and presence.</p>
          </div>
          <div class="shevy-image-container">
             <img src="images/shevy.png" alt="Shevy, Water Wise Mama" class="shevy-image">
          </div>
       </section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>Success Stories</h2>
+        <div class="testimonial-wrapper">
+            <button class="arrow" onclick="changeSlide(-1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-slide active" data-full="Morah Shevy is amazing, the work that you did with our son, you miraculously took this anxious child who was absolutely terrified of water and made him love swimming so much that he will go in when it is freezing cold - the work you do is incredible.&#10;&#10;If you want your kid to do it right, just hire Morah Shevy. We are a major cheerleader for you! We have so much Hakaros Hatov for you and your incredible work. It wasn't even just the swimming lessons, it was so much more than that. It was all the pre-steps and emotions that were involved and I don't know how you just seamlessly knew how to connect to him and make him feel safe and go in the water and swim and now he absolutely loves swimming. This was a child who used to sit on the side on the steps watching the family have a great time and he just refused to go in the water and now he is the first one in the pool!">
+                    <p class="testimonial-text">"Morah Shevy is amazing... you took this anxious child who was terrified of water and made him love swimming so much he's now the first one in the pool!"</p>
+                    <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
+                    <p class="testimonial-author">- Rivky S</p>
+                </div>
+
+                <div class="testimonial-slide" data-full="If you're looking for a patient, kind, not pushy, and skilled swim instructor, then Shevy is the one! After one session, my daughter felt comfortable with underwater activities. After two sessions, she already started swimming with assistance. And shortly after swam independently.&#10;&#10;My daughter really loves Shevy and although we finished swim lessons, she always asks about her and wants me to tell Morah Shevy that she is swimming. Shevy is honest and truly has a passion to help kids swim and achieve this very important skill. I'm so grateful to her!">
+                    <p class="testimonial-text">"If you're looking for a patient, kind, and skilled instructor, Shevy is the one! My daughter already started swimming independently after just a few sessions."</p>
+                    <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
+                    <p class="testimonial-author">- Kim H</p>
+                </div>
+
+                <div class="testimonial-slide" data-full="Shevy is amazing. My kids were both traumatized from past swimming instructor experiences. They refused to put their heads under the water or even to get their face wet in the bath. Shevy’s method is methodical, patient and caring. She really made sure they were comfortable and their progress is incredible. They love swimming and going in the water. We love Shevy and highly recommend her!">
+                    <p class="testimonial-text">"My kids were traumatized from past instructors. Shevy’s method is methodical and caring—their progress has been incredible. They love the water now!"</p>
+                    <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
+                    <p class="testimonial-author">- Rosie G</p>
+                </div>
+
+                <div class="testimonial-slide" data-full="I met Shevy five years ago when my daughter was almost three years old. She has the most beautiful way of teaching kids the life saving and essential skill of swimming without pushing them before they are ready. When my son was ready to learn we struggled to find times that worked for both of us so I went through three other swim instructors. My son became terrified of the water with their harsher approaches to teaching, and as a result refused to go in the water for months.&#10;&#10;I contacted Shevy once more and we were able to set up lessons. Through her patient and loving approach she was able to get him back in the water and excited to learn the tools needed in order to swim. I am now starting lessons with my younger son and am confident Shevy will have him water safe and swimming in no time with her incredible gift.">
+                    <p class="testimonial-text">"She has a beautiful way of teaching without pushing. She was able to get my son back in the water after other instructors made him terrified."</p>
+                    <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
+                    <p class="testimonial-author">- Chaya N</p>
+                </div>
+
+                <div class="testimonial-slide" data-full="I cannot recommend Shevy enough. For most of my life, being in large bodies of water was a deep fear of mine due to a near-drowning incident as a child. Shevy didn’t just teach me how to swim, she taught me how to feel calm, grounded, and safe in the water.&#10;&#10;She worked at a pace that honored my nervous system, helping me build trust with the water slowly and intentionally. Through her guidance, I learned not only how to swim with confidence, but how to feel safe within myself while being near water. This transformation extended beyond me. My children had absorbed my fear, and Shevy worked with them as well. Shevy has a rare gift: the ability to teach skill while creating emotional safety.">
+                    <p class="testimonial-text">"Shevy didn’t just teach me how to swim, she taught me how to feel calm, grounded, and safe after a lifetime of fearing the water."</p>
+                    <button class="read-more-btn" onclick="openModal(this)">Read Full Story</button>
+                    <p class="testimonial-author">- Leah G</p>
+                </div>
+            </div>
+
+            <button class="arrow" onclick="changeSlide(1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+</section>
+
+<div id="testimonialModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="full-testimonial-content"></div>
+    </div>
+</div>
+
       <div class="cta-button-group">
          <a href="mailto:shevy@waterwisemama.com" class="cta-button email-button">
          <i class="fa fa-envelope"></i> Email Me
@@ -354,6 +324,7 @@
          <i class="fab fa-whatsapp"></i> WhatsApp Me
          </a>
       </div>
+
       <section id="pricing" class="container">
          <h2>Lesson Packages</h2>
          <p>Will Travel to Your Pool! <br>*travel fees apply</p>
@@ -373,7 +344,6 @@
                   <li>30-minute session</li>
                   <li>2 Swimmers</li>
                   <li>Price per child</li>
-                  <li>Serving Broward County</li>
                </ul>
             </div>
             <div class="price-card">
@@ -383,7 +353,6 @@
                   <li>30-minute session</li>
                   <li>3+ Swimmers</li>
                   <li>Price per child</li>
-                  <li>Serving Broward County</li>
                </ul>
             </div>
             <div class="price-card">
@@ -392,13 +361,13 @@
                <ul class="price-details">
                   <li>45 minute private session</li>
                   <li>Building Water/Mikvah Confidence</li>
-                  <li>Serving Broward County</li>
-                  <li><i>Remote Coaching Calls Available</i></li>
+                  <li>Remote Coaching Available</li>
                </ul>
             </div>
          </div>
       </section>
    </main>
+
    <footer>
       <div class="container">
          <p style="font-family: var(--font-logo); font-size: 1.5em; margin: 0;">Water Wise Mama</p>
@@ -407,18 +376,73 @@
          Email Shevy Now
          </a>
          <div class="social-links">
-            <a href="https://wa.me/19544883146" target="_blank" aria-label="WhatsApp Business">
-            <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://wa.me/19544883146" target="_blank" aria-label="WhatsApp Business"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
          </div>
          <p style="font-size: 0.9em; margin-top: 15px;">
             Web Design by <a href="mailto:roovyshapiro@gmail.com.com"><i>Roovy</i></a> - &copy; <script>document.write(new Date().getFullYear())</script> Water Wise Mama 
          </p>
       </div>
    </footer>
-</body>
 
+   <script>
+    let slideIndex = 0;
+    let autoPlay;
+    const slides = document.getElementsByClassName("testimonial-slide");
+    const dots = document.getElementsByClassName("dot");
+
+    function startAutoPlay() {
+        autoPlay = setInterval(() => {
+            changeSlide(1);
+        }, 6000); // 8 seconds for a better reading pace
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlay);
+    }
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        if (n >= slides.length) { slideIndex = 0 }
+        if (n < 0) { slideIndex = slides.length - 1 }
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            dots[i].classList.remove("active");
+        }
+        slides[slideIndex].classList.add("active");
+        dots[slideIndex].classList.add("active");
+    }
+
+    // Modal Logic
+    function openModal(btn) {
+        stopAutoPlay(); // Stop sliding while reading
+        const fullText = btn.parentElement.getAttribute('data-full');
+        document.getElementById('full-testimonial-content').innerText = fullText;
+        document.getElementById('testimonialModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('testimonialModal').style.display = "none";
+        startAutoPlay(); // Resume sliding
+    }
+
+    // Close modal if clicking outside the box
+    window.onclick = function(event) {
+        const modal = document.getElementById('testimonialModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    startAutoPlay();
+</script>
+</body>
 </html>
