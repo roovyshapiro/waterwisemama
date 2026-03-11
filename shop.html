@@ -26,6 +26,8 @@
 
         /* --- Header & Logo Section --- */
         header { text-align: center; padding: 40px 0 20px; }
+        .header-logo-text { font-family: var(--font-logo); font-size: 4em; margin-top: 10px; }
+
         .logo-img {
             max-width: 250px;
             height: auto;
@@ -109,6 +111,14 @@
         .nav-link.active {
             border-bottom: 2px solid var(--color-water);
         }
+
+        @media (max-width: 768px) {
+        #about { flex-direction: column; text-align: center; }
+        .shevy-image-container { order: -1; }
+        .header-line-image { width: 80%; padding-top: 20px; }
+        .header-logo-text { font-size: 2.2em; }
+        .testimonial-text { font-size: 1.1em; }
+    }
     </style>
 </head>
 <body>
@@ -118,7 +128,8 @@
         <a href="./index.html">
             <img src="./images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
         </a>
-         <p class="header-logo-text">Water Wise Mama - Shop</p>
+         <p class="header-logo-text">Water Wise Mama</p>
+         <p class="header-logo-text"><b>Shop</b></p>
          <h3>My hand-picked favorites for a safe and joyful water experience.</h3>
          <p><i>As an Amazon Associate I earn from qualifying purchases.</i></p>
       </div>
