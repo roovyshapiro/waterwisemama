@@ -123,21 +123,21 @@
 </head>
 <body>
 
-   <header>
-      <div class="container">
-        <a href="./index.html">
-            <img src="./images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
+    <header>
+    <div class="container">
+        <a href="/">
+            <img src="/images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
         </a>
-         <p class="header-logo-text">Water Wise Mama</p>
-         <p class="header-logo-text"><b>Shop</b></p>
-         <h3>My hand-picked favorites for a safe and joyful water experience.</h3>
-         <p><i>As an Amazon Associate I earn from qualifying purchases.</i></p>
-      </div>
-      <nav class="top-nav">
-        <a href="./index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link active">Shop</a>
+        <p class="header-logo-text">Water Wise Mama</p>
+        <p class="header-logo-text"><b>Shop</b></p>
+        <h3>My hand-picked favorites for a safe and joyful water experience.</h3>
+        <p><i>As an Amazon Associate I earn from qualifying purchases.</i></p>
+    </div>
+    <nav class="top-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/shop.html" class="nav-link active">Shop</a>
     </nav>
-   </header>
+    </header>
 
 <div class="container" id="shop-container">
     </div>
@@ -146,7 +146,8 @@
     // Fetch and display products
     async function loadProducts() {
         try {
-            const response = await fetch('affiliate_products.json');
+           
+            const response = await fetch('/affiliate_products.json');
             const products = await response.json();
             
             // Group products by category
