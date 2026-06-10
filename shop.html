@@ -112,6 +112,46 @@
             border-bottom: 2px solid var(--color-water);
         }
 
+        /* --- Footer Styling --- */
+        footer { 
+            margin-top: 40px; 
+            background-color: var(--color-water); 
+            color: white; 
+            text-align: center; 
+            padding: 30px 0; 
+        }
+        .social-links { 
+            margin: 15px 0; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+        .social-links a { 
+            color: white; 
+            font-size: 1.8em; 
+        }
+        /* This handles the 'Email Shevy Now' button inside the footer */
+        footer .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--color-primary);
+            padding: 12px 25px;
+            margin: 15px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer .cta-button:hover { 
+            background-color: #FAF8F5; 
+            transform: translateY(-2px); 
+        }
+
+
         @media (max-width: 768px) {
         #about { flex-direction: column; text-align: center; }
         .shevy-image-container { order: -1; }
@@ -139,8 +179,28 @@
     </nav>
     </header>
 
-<div class="container" id="shop-container">
+<div class="container" id="shop-container"></div>
+
+<footer>
+    <div class="container">
+        <p style="font-family: var(--font-logo); font-size: 1.5em; margin: 0;">Water Wise Mama</p>
+        <p style="margin-top: 5px;">Ready to begin your journey to water wisdom?</p>
+        <a href="mailto:shevy@waterwisemama.com" class="cta-button" style="background-color: white; color: var(--color-primary);">
+        Email Shevy Now
+        </a>
+        <div class="social-links">
+        <a href="https://wa.me/19544883146" target="_blank" aria-label="WhatsApp Business"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/waterwisemama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="font-size: 0.9em; margin-top: 15px;">
+        Web Design by <a href="mailto:roovyshapiro@gmail.com"><i>Roovy</i></a> - &copy; <script>document.write(new Date().getFullYear())</script> Water Wise Mama 
+        </p>
     </div>
+    <p style="margin: 10px 0;">
+        <a href="/" style="color: white; text-decoration: none; margin-right: 15px;">Home</a> | 
+        <a href="/shop.html" style="color: white; text-decoration: none; margin-left: 15px;">Shop My Gear</a>
+    </p>
+</footer>
 
 <script>
     // Fetch and display products
