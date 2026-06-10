@@ -125,18 +125,18 @@
 
    <header>
       <div class="container">
-        <a href="/">
-            <img src="../images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
+        <a href="./index.html">
+            <img src="./images/logo.png" alt="Water Wise Mama Logo" class="logo-img">
         </a>
          <p class="header-logo-text">Water Wise Mama</p>
          <p class="header-logo-text"><b>Shop</b></p>
          <h3>My hand-picked favorites for a safe and joyful water experience.</h3>
          <p><i>As an Amazon Associate I earn from qualifying purchases.</i></p>
       </div>
-        <nav class="top-nav">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/shop/" class="nav-link active">Shop</a>
-        </nav>
+      <nav class="top-nav">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+    </nav>
    </header>
 
 <div class="container" id="shop-container">
@@ -164,12 +164,16 @@
                 const catProducts = products.filter(p => p.category === cat);
 
                 catProducts.forEach(product => {
+                    // Automatically detect if the link is from Amazon
+                    const isAmazon = product.link.includes('amazon.com') || product.link.includes('amzn.to');
+                    const buttonText = isAmazon ? 'View on Amazon' : 'View Product';
+
                     grid.innerHTML += `
                         <div class="product-card">
                             <img src="${product.image}" alt="${product.name}" class="product-image">
                             <div class="product-name">${product.name}</div>
                             <p class="product-desc">${product.description}</p>
-                            <a href="${product.link}" target="_blank" class="buy-button">View on Amazon</a>
+                            <a href="${product.link}" target="_blank" class="buy-button">${buttonText}</a>
                         </div>
                     `;
                 });
