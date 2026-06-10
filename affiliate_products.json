@@ -70,5 +70,37 @@
     "image": "https://m.media-amazon.com/images/I/618j7GUd13L._AC_SL1500_.jpg",
     "link": "https://amzn.to/4bk3dnV",
     "description": "Guirnd 28 Pcs 40mm Ping Pong Balls for Table Tennis, Games, Arts, Kids, and Pet Toys"
+  },
+  {
+    "id": 10,
+    "name": "Suction Bath Toys",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/518OK0a7+-L._AC_.jpg",
+    "link": "https://amzn.to/4e0iSeE",
+    "description": "Fat Brain Toys Squigz Starter Set, 24 Piece Suction Bath Toys, Sensory Toys for Kids 3 and Up"
+  },
+  {
+    "id": 11,
+    "name": "Foam Bath Toys for Toddlers",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/714ejTR2wzL._AC_SL1200_.jpg",
+    "link": "https://amzn.to/4eC8EQP",
+    "description": "Foam Bath Toys for Toddlers- 29 Piece Vehicles Bath Stickers with Storage Bag Educational Floating Bathtub Traffic Preschool Non-Toxic Fun Bathing for Baby Girls Boys Toddler Kids "
+  },
+  {
+    "id": 12,
+    "name": "Fluffy Foam Bath Soap",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/816hA840hhL._SL1500_.jpg",
+    "link": "https://amzn.to/43lIEnv",
+    "description": "Tub Works® Fluffy Foam Soap, Variety 6 Pack | Shape, Mold & Create Bath Art with Soft Bath Foam for Kids | Gentle, Cleansing Kids Bath Soap | Easy-to-Use Spray Nozzles | Fruity, Fun Bath Colors "
+  },
+  {
+    "id": 13,
+    "name": "Floatie Friends Hand Float",
+    "category": "Swim Gear",
+    "image": "https://m.media-amazon.com/images/I/81qLqvGZnKL._AC_SL1500_.jpg",
+    "link": "https://amzn.to/4vjOqCx",
+    "description": "FINIS Floatie Friends Hand Float Learn-to-Swim Aids for Children - Pufferfish (Set of 2) "
   }
 ]
