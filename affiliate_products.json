@@ -110,5 +110,14 @@
     "image": "https://www.kaizenkidz.com/cdn/shop/files/KaizenKids6776.jpg", 
     "link": "https://www.kaizenkidz.com/products/swim-pack",
     "description": "The Kaizen Kidz 3–2–1 Swim Pack is a progressive swim trainer with a patented twist-and-lock buoyancy system that grows with your child, encouraging proper horizontal body alignment rather than vertical dependence."
+  },
+  {
+    "id": 15,
+    "name": "Happy Nappy™ Swim Diaper",
+    "category": "Swim Wear",
+    "image": "https://us.splashabout.com/cdn/shop/files/HNPTT-F_2.jpg",
+    "link": "https://us.splashabout.com/collections/baby-swimming-happy-nappy-products-happy-nappy/products/happy-nappy%E2%84%A2-turtle-tide",
+    "description": "Reusable Swim Diaper for Babies and Toddlers, Use discount code SUPERHERO20 for 20% OFF"
   }
+
 ]
