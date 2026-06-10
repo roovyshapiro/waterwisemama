@@ -164,12 +164,16 @@
                 const catProducts = products.filter(p => p.category === cat);
 
                 catProducts.forEach(product => {
+                    // Automatically detect if the link is from Amazon
+                    const isAmazon = product.link.includes('amazon.com') || product.link.includes('amzn.to');
+                    const buttonText = isAmazon ? 'View on Amazon' : 'View Product';
+
                     grid.innerHTML += `
                         <div class="product-card">
                             <img src="${product.image}" alt="${product.name}" class="product-image">
                             <div class="product-name">${product.name}</div>
                             <p class="product-desc">${product.description}</p>
-                            <a href="${product.link}" target="_blank" class="buy-button">View on Amazon</a>
+                            <a href="${product.link}" target="_blank" class="buy-button">${buttonText}</a>
                         </div>
                     `;
                 });
