@@ -126,5 +126,45 @@
     "image": "https://m.media-amazon.com/images/I/71zPA1eZvFL._AC_SL1500_.jpg",
     "link": "https://amzn.to/4vwCKfA",
     "description": "4 Pcs Swimming Noodle Floating Connectors. Swim Pool Noodles Accessories - Colorful Connector for Beginners"
+  },
+  {
+    "id": 17,
+    "name": "Colorful Starfish Diving Toys",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/81uOKdyApQL._AC_SL1500_.jpg",
+    "link": "https://amzn.to/3SzOqji",
+    "description": "16 Pieces Big Diving Pool Toys, Beach Colorful Starfish Swimming Underwater Pool Toys - Soft Rubber Dive Throw for Kids (2 Sizes)"
+  },
+  {
+    "id": 18,
+    "name": "Shark Gliding Diving Toys",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/91J38+rJOCL._AC_SL1500_.jpg",
+    "link": "https://amzn.to/4gdCc9Q",
+    "description": "8 Pack Shark Underwater Diving Toys, Glides Under Water (Sharks)"
+  },
+  {
+    "id": 19,
+    "name": "Rings Diving Toys",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/81Rr-0I5D1L._AC_SL1500_.jpg",
+    "link": "https://amzn.to/4oUMIVD",
+    "description": "Dive into excitement with this set of 8 Diving Toy Rings"
+  },
+  {
+    "id": 20,
+    "name": "Cage + Floating Animal Diving Toys",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/81AClgaCGKL._AC_SL1500_.jpg",
+    "link": "https://amzn.to/44Bojee",
+    "description": "Kids Pool Diving Toys, Swimming Dive Pool Game, Play Set W/ Fish Box Floating Animals,"
+  },  
+  {
+    "id": 21,
+    "name": "Treasure Chest Water Dive Game",
+    "category": "Toys",
+    "image": "https://m.media-amazon.com/images/I/81WVz4feURL._AC_SL1500_.jpg",
+    "link": "https://amzn.to/4awdZI6",
+    "description": "Treasure Chest Water Dive Game, 4 Diving Keys - One Opens the Treasure!"
   }
 ]
